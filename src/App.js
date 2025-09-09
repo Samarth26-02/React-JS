@@ -16,6 +16,9 @@ import PreferenceForm from "./PreferenceForm";
 import UncontrolledForm from "./UncontrolledForm";
 import RegistrationForm from "./RegistrationForm";
 import TitleUpdater from "./TitleUpdater";
+import { UserProvider } from "./context/UserContext";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
 function App(){
   return(
     <div>
@@ -39,6 +42,13 @@ function App(){
       <UncontrolledForm />
       <RegistrationForm />
       <TitleUpdater />
+
+      <UserProvider>
+        <div style={{textAlign:"center", marginTop:"50px"}}>
+          <Navbar />
+          <Profile />
+        </div>
+      </UserProvider>
     </div>
   );
 }
